@@ -39,8 +39,7 @@ console.log(merge({a: 1, b: 2}, {c: 3, d: 4}));
  */
 
 const setName = (obj, name) => {
-    return [...[obj]],
-    {name: name}
+    return {...obj, name}
 }
 console.log(setName({name: 'toto'}, 'titi'));
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
