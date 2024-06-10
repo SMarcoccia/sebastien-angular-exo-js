@@ -6,10 +6,14 @@
  */
 
 const sleep = async () => {
-    setTimeout(() => {
-        console.log("J'ai attendu 2 secondes");
-    }, 2000);
+    return new Promise((res, rej)=>{
+        setTimeout(() => {
+            console.log("J'ai attendu 2 secondes");
+        }, 2000);
+    })
 };
-sleep();
+
+//const sleep = ms => new Promise(r => setTimeout(r, ms));
+sleep(2000);
 
 module.exports = {sleep};
