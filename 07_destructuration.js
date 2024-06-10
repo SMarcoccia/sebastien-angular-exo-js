@@ -13,7 +13,7 @@
  */
 
 const extractFirstTwo = () => {}
-
+console.log(extractFirstTwo());
 /**
  * utilisez la décomposition pour extraire la premiere case du tableau et le reste du tableau
  * retournez uniquement le reste du tableau
@@ -22,7 +22,7 @@ const extractFirstTwo = () => {}
  */
 
 const extractRest = () => {}
-
+console.log(extractRest());
 /**
  * utilisez la décomposition pour extraire le champ "name" de l'objet passé en paramètre
  * retournez le champ "name"
@@ -36,7 +36,7 @@ const extractRest = () => {}
  */
 
 const extractName = () => {}
-
+console.log(extractName());
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
  * 
@@ -49,5 +49,5 @@ const extractName = () => {}
  */
 
 const removePassword = () => {};
-
+console.log(removePassword());
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
