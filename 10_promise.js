@@ -8,7 +8,7 @@
 const sleep = async () => {
     return new Promise((res, rej)=>{
         setTimeout(() => {
-            console.log("J'ai attendu 2 secondes");
+            res("J'ai attendu 2 secondes");
         }, 2000);
     })
 };
