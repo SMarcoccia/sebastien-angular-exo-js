@@ -12,11 +12,11 @@ const {sleep} = require("./10_promise");
  * 
  */
 const usingThen = (cb) => {
-        cb.then((result)=>{
+        sleep(cb).then((result)=>{
             console.log(result);
         });
 }
-//usingThen(sleep)
+usingThen(2000)
 
 
 /**
@@ -30,16 +30,9 @@ const usingThen = (cb) => {
  *   - ne pas utiliser .then
  */
 
-const usingAwait = async (cb) => {
-    const promise = new Promise ((res, rej) =>{
-        cb;
-    });
+const usingAwait = async (cb) => await sleep(cb);
 
-    let result=await promise;
-    console.log(result);
-}
-
-usingAwait(sleep);
+usingAwait(2000);
 
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
@@ -58,10 +51,11 @@ const axios = require("axios");
 
 const apiResponse = async (url) => {
     return axios.get(url).then(res=>{
+        console.log("res.data : ", res.data);
         return res.data;
     });
 }
 
-apiResponse("https://jsonplaceholder.typicode.com/todos/1");
+console.log(apiResponse("https://jsonplaceholder.typicode.com/todos/1"));
 
 module.exports = {usingThen, usingAwait, apiResponse};

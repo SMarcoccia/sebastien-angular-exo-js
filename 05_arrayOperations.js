@@ -24,7 +24,7 @@ console.log(multiplyByTwo([1, 2, 3, 4, 5]));
   */
 
 const filterNameStartByA = (array) => array.filter(name => name[0]==='A')
-console.log(filterNameStartByA(["Ayoub", "Seb", "Anaïs", "Igor", "Albator"]));
+console.log(filterNameStartByA(["Ayoub", "Seb", "Anaïs", "Igor", "Albator", ""]));
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -36,8 +36,8 @@ console.log(filterNameStartByA(["Ayoub", "Seb", "Anaïs", "Igor", "Albator"]));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const sum = (array) => array.length !== 0 ? array.reduce((accumulator, currentVal )=>accumulator+currentVal) : 0;
-console.log(sum([]));
+const sum = (array) => array.length !== 0 ? array.reduce((accu, i )=>accu+i, 0) : 0;
+console.log(sum([1, 2, 3, 4, 5]));
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -58,7 +58,7 @@ console.log(sum([]));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => array.find((obj)=>obj.id===id).name;
+const findUserById = (array, id) => array.find((obj)=>obj.id===id)?.name;
 console.log(findUserById([
   {id: 1, name: 'John'},
   {id: 2, name: 'Doe'},

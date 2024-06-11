@@ -35,8 +35,9 @@ const countWords = (sentence) => {
   array.reduce((accu, val)=>{
     console.log(`tmp : ${tmp} - accu : ${accu} - ${val} : val`);
     obj[accu]=1;
-    obj[val]=accu===tmp ? ++i : 1
-    console.log(obj);
+    console.log(`${accu}===${tmp}`);
+    obj[val]=accu===tmp ? i++ : 1
+    console.log("obj[val] : ", obj);
     tmp=val;
     return val;
   })
