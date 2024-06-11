@@ -5,13 +5,13 @@
  * utilisez new Promise
  */
 
-const sleep = (ms) => new Promise ((resolve, reject) => {
+const sleep = () => new Promise ((resolve, reject) => {
     setTimeout(() => {
         resolve("J'ai attendu 2 sec");
-    }, ms);
+    }, 2000);
 });
 
-sleep(2000).then((res)=>{
+sleep(0).then((res)=>{
     console.log(res);
 })
 
