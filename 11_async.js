@@ -19,7 +19,7 @@ usingThen(() => {
     console.log("ok");
   })
 
-usingThen(sleep)
+//usingThen(sleep)
 
 
 /**
@@ -55,12 +55,11 @@ usingAwait(() => {
 const axios = require("axios");
 
 const apiResponse = async (url) => {
-    return axios.get(url).then(res=>{
+    await axios.get(url).then(res=>{
         console.log("res.data : ", res.data);
         return res.data;
     });
 }
-
-console.log(apiResponse("https://jsonplaceholder.typicode.com/todos/1"));
+apiResponse("https://jsonplaceholder.typicode.com/todos/1")
 
 module.exports = {usingThen, usingAwait, apiResponse};
