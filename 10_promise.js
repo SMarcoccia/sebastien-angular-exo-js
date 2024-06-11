@@ -11,7 +11,7 @@ const sleep = () => new Promise ((resolve, reject) => {
     }, 2000);
 });
 
-sleep(0).then((res)=>{
+sleep().then((res)=>{
     console.log(res);
 })
 
