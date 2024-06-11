@@ -20,7 +20,7 @@ const parallel = async () => {
     const promise2=apiResponse("https://jsonplaceholder.typicode.com/todos/2");
     const promise3=apiResponse("https://jsonplaceholder.typicode.com/todos/3");
     
-    return Promise.all([promise1, promise2, promise3])
+    return await Promise.all([promise1, promise2, promise3])
 }
 
 parallel().then((res)=> console.log(res))
