@@ -29,13 +29,16 @@ const countWords = (sentence) => {
   const array=sentence.split(' ');
   console.log(array);
 
+  let obj={};
   let i=0;
-  const obj={};
+  let tmp="";
   array.reduce((accu, val)=>{
-    console.log(`accu : ${accu} === ${val} : val`);
-    obj[accu]=accu === val ? obj[accu]=i++ : 1
-    accu=val;
-    console.log(`accu : ${accu}`);
+    console.log(`tmp : ${tmp} - accu : ${accu} - ${val} : val`);
+    obj[accu]=1;
+    obj[val]=accu===tmp ? ++i : 1
+    console.log(obj);
+    tmp=val;
+    return val;
   })
   console.log(obj);
 };
