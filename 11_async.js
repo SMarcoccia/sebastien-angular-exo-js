@@ -35,7 +35,9 @@ usingThen(() => {
 
 const usingAwait = async (cb) => await sleep(cb);
 
-usingAwait(2000);
+usingAwait(() => {
+    console.log("ok");
+  });
 
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
