@@ -56,13 +56,14 @@ usingAwait(() => {
 
 //décommentez la ligne suivante une fois le package installé
 const axios = require("axios");
+const url = "https://jsonplaceholder.typicode.com/todos/1";
 
 const apiResponse = async (url) => {
-    await axios.get(url).then(res=>{
-        console.log("res.data : ", res.data);
-        return res.data;
-    });
+    let res=await axios.get(url);
+    return res.data;
 }
-apiResponse("https://jsonplaceholder.typicode.com/todos/1")
+apiResponse(url).then((res)=>{
+    console.log(res);
+})
 
 module.exports = {usingThen, usingAwait, apiResponse};
