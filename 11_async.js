@@ -19,7 +19,7 @@ usingThen(() => {
     console.log("ok");
   })
 
-//usingThen(sleep)
+usingThen(sleep)
 
 
 /**
