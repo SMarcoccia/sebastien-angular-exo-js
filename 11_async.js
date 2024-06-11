@@ -33,7 +33,10 @@ usingThen(() => {
  *   - ne pas utiliser .then
  */
 
-const usingAwait = async (cb) => await sleep(cb);
+const usingAwait = async (cb) => {
+    await sleep();
+    return cb();
+}
 
 usingAwait(() => {
     console.log("ok");
