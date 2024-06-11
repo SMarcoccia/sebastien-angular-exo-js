@@ -3,7 +3,8 @@
 Exercice : Trouver la fréquence des mots dans une phrase
 
 Objectif :
-Écrire une fonction qui prend en entrée une chaîne de caractères et qui retourne un objet où les clés sont les mots de la phrase et les valeurs sont le nombre de fois où ces mots apparaissent.
+Écrire une fonction qui prend en entrée une chaîne de caractères et qui retourne un objet où les clés sont les mots de la phrase
+et les valeurs sont le nombre de fois où ces mots apparaissent.
 
 Consignes :
 
@@ -25,6 +26,18 @@ ex: la pomme est rouge et la banane est jaune
  */
 
 const countWords = (sentence) => {
+  const array=sentence.split(' ');
+  console.log(array);
+
+  let i=0;
+  const obj={};
+  array.reduce((accu, val)=>{
+    console.log(`accu : ${accu} === ${val} : val`);
+    obj[accu]=accu === val ? obj[accu]=i++ : 1
+    accu=val;
+    console.log(`accu : ${accu}`);
+  })
+  console.log(obj);
 };
 console.log(countWords("la pomme est rouge et la banane est jaune"));
 

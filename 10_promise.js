@@ -5,12 +5,11 @@
  * utilisez new Promise
  */
 
-const sleep = async (time) => {
+const sleep = new Promise ((resolve, reject) => {
     setTimeout(() => {
-        console.log("J'ai attendu 2 secondes");
-    }, time);
-};
-
-sleep(2000);
+        resolve("J'ai attendu 2 sec");
+    }, 2000);
+});
+console.log(sleep);
 
 module.exports = {sleep};
