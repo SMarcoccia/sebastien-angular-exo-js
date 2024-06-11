@@ -12,11 +12,11 @@ const {sleep} = require("./10_promise");
  * 
  */
 const usingThen = (cb) => {
-        sleep(cb).then((result)=>{
+       cb.then((result)=>{
             console.log(result);
         });
 }
-usingThen(2000)
+usingThen(sleep)
 
 
 /**
